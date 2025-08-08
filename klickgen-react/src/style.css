@@ -1,0 +1,12 @@
+:root {
+  --clr-bg: #0e0f11;
+  --clr-text: #ffffff;
+  --clr-accent: #00ff94;
+}
+body {
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+}
+/* Add additional CSS here based on the earlier design */
