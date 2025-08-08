@@ -10,3 +10,28 @@ body {
   color: var(--clr-text);
 }
 /* Add additional CSS here based on the earlier design */
+/* Animated hero background (CSS-only, replaces particles) */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  background:
+    radial-gradient(60% 60% at 20% 20%, rgba(0,255,148,0.18), transparent 60%),
+    radial-gradient(50% 50% at 80% 30%, rgba(0,255,148,0.12), transparent 60%),
+    radial-gradient(40% 40% at 50% 80%, rgba(0,255,148,0.10), transparent 60%);
+  filter: blur(40px);
+  animation: floatBg 16s ease-in-out infinite alternate;
+  z-index: -1;
+}
+@keyframes floatBg {
+  0%   { transform: scale(1) translate(0,0) rotate(0deg); }
+  100% { transform: scale(1.06) translate(1%, -1%) rotate(2deg); }
+}
